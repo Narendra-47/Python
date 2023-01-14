@@ -1,4 +1,3 @@
-# Python
 ## Assignment Part-1
 Q1. Why do we call Python as a general purpose and high-level programming language?
 A: Python can be used for multiple purposes like software development,scripting etc. hence it is called as a generate purpose language. 
@@ -60,8 +59,16 @@ A: x ='iNeuron'
 
 Q17. Write a code to take a number as an input from the user and check if the number is odd or even.
 A: 
+x=input('Enter a number\n')
+y=int(x)
+if y%2==0:
+    print('The number entered is an Even number')
+else:
+    print('The number entered is an Odd number')
+
 
 Q18. What are boolean operator?
+A: The operators that result in boolean values ( True or False) are called as boolean operators. Example: AND , OR , NOT
 
 Q19. What will the output of the following?
 ```
@@ -75,18 +82,51 @@ True and False and True
 ```
 
 Q20. What are conditional statements in Python?
+A: Conditional statements are ones which perform a specific actions depending on if a condition is met or not.
 
 Q21. What is use of 'if', 'elif' and 'else' keywords?
+A: IF condition is used to check whether a logical condition is met, ELIF and ELSE words are used to check for other conditions which are not part of the IF statement .
+ Example: 
+ x=input('Enter a number\n')
+y=int(x)
+if y%2==0:
+    print('The number entered is an Even number')
+else:
+    print('The number entered is an Odd number')
 
 Q22. Write a code to take the age of person as an input and if age >= 18 display "I can vote". If age is < 18 display "I can't vote".
+A:
+age=int(input('Enter your age\n'))
+if age>=18:
+    print('I can vote')
+else:
+    print("I can't vote")
 
 Q23. Write a code that displays the sum of all the even numbers from the given list.
 ```
 numbers = [12, 75, 150, 180, 145, 525, 50]
 ```
+A:
+
+numbers = [12, 75, 150, 180, 145, 525, 50]
+total=0
+for x in numbers:
+    if x%2==0:
+        total=total+x
+print(total)
+
 
 
 Q24. Write a code to take 3 numbers as an input from the user and display the greatest no as output.
+A: 
+x,y,z=input("Enter 3 numbers separated by spaces").split()
+if x>=y and x>=z:
+    print('The greatest number is x:',x)
+if y>=x and y>=z:
+    print('The greatest number is y:',y)
+if z>=y and z>=x:
+    print('The greatest number is z:',z)
+exit()
 
 Q25. Write a program to display only those numbers from a list that satisfy the following conditions
 
@@ -98,3 +138,13 @@ Q25. Write a program to display only those numbers from a list that satisfy the 
 ```
 numbers = [12, 75, 150, 180, 145, 525, 50]
 ```
+A:
+
+numbers = [12, 75, 150, 180, 145, 525, 50]
+
+for x in numbers:
+    if x>500:
+        exit()
+    if x%5==0 and x!=150:
+        print(x)
+
